@@ -14,6 +14,6 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo ${{ github.event.inputs.source_branch }}
+    echo ${github.event.inputs.source_branch}
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
