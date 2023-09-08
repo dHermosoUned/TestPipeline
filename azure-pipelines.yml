@@ -16,3 +16,10 @@ steps:
 - script: |
     echo $(Build.SourceVersionMessage)
   displayName: 'Run a multi-line script'
+
+- task: DownloadGitHubRelease@0
+  inputs:
+    connection: 'dHermosoUned'
+    userRepository: 'https://github.com/dHermosoUned/TestPipeline'
+    defaultVersionType: 'latest'
+    downloadPath: '$(System.ArtifactsDirectory)'
